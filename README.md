@@ -1,2 +1,3 @@
-# bloom-art-sqcq
-Build a flower in html
+# App
+
+Built by [Agent Switch](https://theswitchai.com/code).

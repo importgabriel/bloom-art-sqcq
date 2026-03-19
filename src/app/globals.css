@@ -1,3 +1,84 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ─── Flower: bloom in with spring bounce ─── */
+@keyframes bloom {
+  0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+  55%  { transform: scale(1.18) rotate(6deg); opacity: 1; }
+  75%  { transform: scale(0.93) rotate(-3deg); }
+  90%  { transform: scale(1.04) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* ─── Individual petal appears with a delay ─── */
+@keyframes petalBloom {
+  0%   { transform: rotate(var(--angle)) scaleY(0); opacity: 0; }
+  70%  { transform: rotate(var(--angle)) scaleY(1.12); opacity: 1; }
+  100% { transform: rotate(var(--angle)) scaleY(1); opacity: 1; }
+}
+
+/* ─── Petals breathe gently once open ─── */
+@keyframes petalBreath {
+  0%, 100% { transform: rotate(var(--angle)) scaleY(1)    scaleX(1);    filter: brightness(1);   }
+  50%       { transform: rotate(var(--angle)) scaleY(1.04) scaleX(1.03); filter: brightness(1.08); }
+}
+
+/* ─── Whole plant sways in the breeze ─── */
+@keyframes sway {
+  0%   { transform: rotate(0deg); }
+  20%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(3.5deg); }
+  80%  { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* ─── Center glows and pulses ─── */
+@keyframes centerGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(253, 224, 71, 0.7),
+                0 0 0 0 rgba(253, 224, 71, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 16px 6px rgba(253, 224, 71, 0.25),
+                0 0 32px 12px rgba(253, 186, 34, 0.12);
+    transform: scale(1.12);
+  }
+}
+
+/* ─── Stem grows up from the ground ─── */
+@keyframes stemGrow {
+  0%   { transform: scaleY(0); opacity: 0; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+
+/* ─── Leaves unfurl from the stem ─── */
+@keyframes leafLeft {
+  0%   { transform: scaleX(0) rotate(-10deg); opacity: 0; transform-origin: right center; }
+  100% { transform: scaleX(1) rotate(0deg);   opacity: 1; transform-origin: right center; }
+}
+
+@keyframes leafRight {
+  0%   { transform: scaleX(0) rotate(10deg);  opacity: 0; transform-origin: left center; }
+  100% { transform: scaleX(1) rotate(0deg);   opacity: 1; transform-origin: left center; }
+}
+
+/* ─── Background gradient drift ─── */
+@keyframes bgDrift {
+  0%, 100% { background-position: 0%   50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+/* ─── Sparkle particles ─── */
+@keyframes sparkle {
+  0%        { transform: translateY(0)   scale(0);   opacity: 0; }
+  30%       { opacity: 1; }
+  70%, 100% { transform: translateY(-40px) scale(1); opacity: 0; }
+}
+
+/* ─── Title fade-in ─── */
+@keyframes fadeInDown {
+  0%   { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0);     opacity: 1; }
+}

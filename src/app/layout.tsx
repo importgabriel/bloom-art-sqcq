@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "App",
-  description: "Built by Agent Switch",
+  title: "In Full Bloom",
+  description: "A beautiful animated flower built with pure HTML and CSS",
 };
 
 export default function RootLayout({
@@ -13,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={{ margin: 0, padding: 0, fontFamily: 'system-ui, sans-serif' }}>
+        {children}
+      </body>
     </html>
   );
 }
